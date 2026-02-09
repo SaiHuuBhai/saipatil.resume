@@ -57,14 +57,20 @@
     }
 
     header img {
-      width: 250px;
-      height: 250px;
+      width: 260px;
+      height: 360px;
       object-fit: cover;
-      border-radius: 50%;
-      border: 3px solid var(--accent);
-      margin-bottom: 1.5rem;
+      border-radius: 18px;
+      border: 2px solid var(--accent);
+      margin-bottom: 1.8rem;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
       animation: fadeUp 1s ease forwards;
     }
+    header img:hover {
+      transform: translateY(-6px) scale(1.02);
+      transition: transform 0.3s ease;
+    }
+
 
     header h1 {
       font-size: 2.8rem;
@@ -187,6 +193,13 @@
         font-size: 2.2rem;
       }
     }
+    @media (max-width: 600px) {
+      header img {
+        width: 200px;
+        height: 280px;
+      }
+    }
+
   </style>
 </head>
 
@@ -245,7 +258,9 @@
   <div class="modal" id="contactModal">
     <div class="modal-content">
       <h2>Contact Me</h2>
-      <p>📧 saiapatil14@gmail.com</p>
+     <p>📧 <a href="mailto:saiapatil14@gmail.com" target="_blank">
+saiapatil14@gmail.com
+    </a></p>
       <p>📞 <a href="tel:+919561124255">+91 9561124255</a></p>
       <p>👻 <a href="https://www.snapchat.com/add/kakashi_sai1" target="_blank">
 Snapchat: kakashi_sai1
