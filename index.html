@@ -57,8 +57,8 @@
     }
 
     header img {
-      width: 160px;
-      height: 160px;
+      width: 250px;
+      height: 250px;
       object-fit: cover;
       border-radius: 50%;
       border: 3px solid var(--accent);
@@ -139,7 +139,17 @@
       justify-content: center;
       z-index: 999;
     }
+          a {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 500;
+      }
+      
+      a:hover {
+        text-decoration: underline;
+      }
 
+    
     .modal-content {
       background: var(--card);
       padding: 2rem;
@@ -236,8 +246,14 @@
     <div class="modal-content">
       <h2>Contact Me</h2>
       <p>📧 saiapatil14@gmail.com</p>
-      <p>📞 +91 9561124255</p>
-      <p>👻 Snapchat: kakashi_sai1</p>
+      <p>📞 <a href="tel:+919561124255">+91 9561124255</a></p>
+      <p>👻 <a href="https://www.snapchat.com/add/kakashi_sai1" target="_blank">
+Snapchat: kakashi_sai1
+</a></p>
+      <p>📸 <a href="https://instagram.com/YOUR_USERNAME" target="_blank">
+Instagram: sai_sapgaming
+</a></p>
+
       <button onclick="closeModal()">Close</button>
     </div>
   </div>
