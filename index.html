@@ -134,6 +134,32 @@
       opacity: 0.9;
     }
 
+      .gallery-content {
+      max-width: 900px;
+    }
+    
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    
+    .gallery-grid img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+    }
+
+
     /* Modal */
     .modal {
       position: fixed;
@@ -213,10 +239,12 @@
       <h1>Heyy!! How uu been ? </h1>
       <p>17-year-old tech enthusiast passionate about code, creativity, and speed.</p>
 
-      <div class="btns">
-        <button onclick="openModal()">Contact</button>
-        <a class="btn" href="mailto:saiapatil14@gmail.com" target="_blank">Gmail</a>
-      </div>
+     <div class="btns">
+      <button onclick="openModal()">Contact</button>
+      <a class="btn" href="mailto:saiapatil14@gmail.com" target="_blank">Gmail</a>
+      <button onclick="openGallery()">Gallery</button>
+    </div>
+
     </div>
   </header>
 
@@ -269,6 +297,31 @@ Snapchat: kakashi_sai1
 Instagram: sai_sapgaming
 </a></p>
 
+      <!-- GALLERY MODAL -->
+<div class="modal" id="galleryModal">
+  <div class="modal-content gallery-content">
+    <h2>My Gallery</h2>
+
+    <div class="gallery-grid">
+      <img src="gallery/gallery1.jpg">
+      <img src="gallery/gallery2.jpg">
+      <img src="gallery/gallery3.jpg">
+      <img src="gallery/gallery4.jpg">
+      <img src="gallery/gallery5.jpg">
+      <img src="gallery/gallery6.jpg">
+      <img src="gallery/gallery7.jpg">
+      <img src="gallery/gallery8.jpg">
+      <img src="gallery/gallery9.jpg">
+      <img src="gallery/gallery10.jpg">
+      <img src="gallery/gallery11.jpg">
+      <img src="gallery/gallery12.jpg">
+    </div>
+
+    <button onclick="closeGallery()">Close</button>
+  </div>
+</div>
+
+
       <button onclick="closeModal()">Close</button>
     </div>
   </div>
@@ -287,12 +340,21 @@ Instagram: sai_sapgaming
 
     // Modal
     function openModal() {
-      document.getElementById("contactModal").style.display = "flex";
+          document.getElementById("contactModal").style.display = "flex";
+        }
+    
+        function closeModal() {
+          document.getElementById("contactModal").style.display = "none";
+        }
+        function openGallery() {
+      document.getElementById("galleryModal").style.display = "flex";
+    }
+    
+    function closeGallery() {
+      document.getElementById("galleryModal").style.display = "none";
     }
 
-    function closeModal() {
-      document.getElementById("contactModal").style.display = "none";
-    }
+    
   </script>
 </body>
 </html>
